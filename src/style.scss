@@ -1,0 +1,15 @@
+.manage{
+  margin-left: 10%;
+
+  &__line{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &__title{
+      width: 100px;
+      text-align: right;
+      margin-right: 10px;
+    }
+  }
+}
