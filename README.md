@@ -26,7 +26,7 @@ console.log('extract',hoegaarden.extract('http://www.qfed.com?name=aaa&name=bbb&
 以对象字面量形式返回 url 中的 query 解析结果
 
 ```js
-const hoegaarden = require('hoegaarden');
+const hoegaarden = require('@qfed/hoegaarden');
 
 hoegaarden.parse('http://www.qfed.com?name=aaa&name=bbb&age=25')
 //=> {name: ['aaa', 'bbb'], age: 25}

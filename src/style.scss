@@ -1,15 +1,58 @@
 .manage{
-  margin-left: 10%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
 
   &__line{
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     &__title{
-      width: 100px;
+      width: 80px;
       text-align: right;
       margin-right: 10px;
     }
+
+    &__input{
+      width: 400px;
+      height: 24px;
+      font-size: 14px;
+    }
+
+    &__input1{
+      width: 250px;
+      margin-right: 10px;
+    }
+
+    &__input2{
+      width: 134px;
+    }
+  }
+}
+
+.title {
+  animation: change 10s linear 0s infinite;
+}
+
+@keyframes change {
+  0% {
+    color: #333;
+  }
+  20% {
+    color: #ff0;
+  }
+  40% {
+    color: #f60;
+  }
+  60% {
+    color: #cf0;
+  }
+  80% {
+    color: #f00;
+  }
+  100% {
+    color: #333;
   }
 }
