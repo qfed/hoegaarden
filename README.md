@@ -1,15 +1,19 @@
 # @qfed/hoegaarden
 
+##  Links to online
+
+[在线链接](https://qfed.github.io/hoegaarden/)
+
 ## Install
 
 ```
-$ npm install hoegaarden
+$ npm install @qfed/hoegaarden
 ```
 
 ## Usage
 
 ```js
-const hoegaarden = require('hoegaarden');
+const hoegaarden = require('@qfed/hoegaarden');
 
 console.log('parse:',hoegaarden.parse('http://www.qfed.com?name=aaa&name=bbb&age=25'))
 console.log('param:',hoegaarden.param('http://www.qfed.com?name=aaa&name=bbb&age=25','name'))
@@ -37,7 +41,7 @@ hoegaarden.parse('http://www.qfed.com?name=aaa&name=bbb&age=25')
 复用parse，传入 url 与 key 返回其对应的 value
 
 ```js
-const hoegaarden = require('hoegaarden');
+const hoegaarden = require('@qfed/hoegaarden');
 
 hoegaarden.param('http://www.qfed.com?name=aaa&name=bbb&age=25','name')
 //=> ['aaa', 'bbb']
@@ -51,7 +55,7 @@ hoegaarden.param('http://www.qfed.com?name=aaa&name=bbb&age=25','age')
 将一个对象转化为 url 中携带的参数格式的 string
 
 ```js
-const hoegaarden = require('hoegaarden');
+const hoegaarden = require('@qfed/hoegaarden');
 
 hoegaarden.stringify({name: ['aaa', 'bbb'], age: 25})
 //=> 'age=25&name=aaa&name=bbb'
@@ -62,7 +66,7 @@ hoegaarden.stringify({name: ['aaa', 'bbb'], age: 25})
 复用parse，将 url 中地址与参数分开
 
 ```js
-const hoegaarden = require('hoegaarden');
+const hoegaarden = require('@qfed/hoegaarden');
 
 hoegaarden.parseUrl('http://www.qfed.com?name=aaa&name=bbb&age=25');
 //=> {url: 'http://www.qfed.com', query: {name: ['aaa', 'bbb'], age: 25}}
@@ -73,7 +77,7 @@ hoegaarden.parseUrl('http://www.qfed.com?name=aaa&name=bbb&age=25');
  截取 url 携带的参数
 
 ```js
-const hoegaarden = require('hoegaarden');
+const hoegaarden = require('@qfed/hoegaarden');
 
 hoegaarden.extract('http://www.qfed.com?name=aaa&name=bbb&age=25')
 //=> 'name=aaa&name=bbb&age=25'
