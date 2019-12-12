@@ -1,8 +1,8 @@
 {
   "name": "@qfed/hoegaarden",
   "version": "1.0.0",
-  "description": "Parse, param, stringify, parseUrl and parseUrl with url",
-  "main": "index.ts",
+  "description": "Parse, param, stringify, parseUrl and extract with url",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "lilith run dev",
     "build":"lilith run build"
@@ -13,12 +13,10 @@
   },
   "author": "@qfed/wwx",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@qfed/lilith": "^0.0.10",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
-  },
-  "devDependencies": {
+    "react-dom": "^16.12.0",
     "@qfed/lilith-compiler": "^0.0.5"
   }
 }

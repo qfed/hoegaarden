@@ -32,12 +32,16 @@ export default class App extends Component {
               onChange={e => {
                 this.setState({
                   parse: e.target.value,
-                },()=>{
+                }, () => {
                   try {
                     this.setState({
                       parseResult: JSON.stringify(hoegaarden.parse(this.state.parse)),
                     })
-                  } catch (error) {}
+                  } catch (error) {
+                    this.setState({
+                      parseResult: null,
+                    })
+                  }
                 })
               }}
               value={this.state.parse}
@@ -55,12 +59,16 @@ export default class App extends Component {
               onChange={e => {
                 this.setState({
                   param: e.target.value,
-                },()=>{
+                }, () => {
                   try {
                     this.setState({
-                      paramResult: JSON.stringify(hoegaarden.param(this.state.param,this.state.paramKey)),
+                      paramResult: JSON.stringify(hoegaarden.param(this.state.param, this.state.paramKey)),
                     })
-                  } catch (error) {}
+                  } catch (error) {
+                    this.setState({
+                      paramResult: null,
+                    })
+                  }
                 })
               }}
               value={this.state.param}
@@ -71,12 +79,16 @@ export default class App extends Component {
               onChange={e => {
                 this.setState({
                   paramKey: e.target.value,
-                },()=>{
+                }, () => {
                   try {
                     this.setState({
-                      paramResult: JSON.stringify(hoegaarden.param(this.state.param,this.state.paramKey)),
+                      paramResult: JSON.stringify(hoegaarden.param(this.state.param, this.state.paramKey)),
                     })
-                  } catch (error) {}
+                  } catch (error) {
+                    this.setState({
+                      paramResult: null,
+                    })
+                  }
                 })
               }}
               value={this.state.paramKey}
@@ -94,16 +106,20 @@ export default class App extends Component {
               onChange={e => {
                 this.setState({
                   stringify: e.target.value,
-                },()=>{
-                  function get(text){
-                    return text;
-                  }
-                  const res = eval('get(' + this.state.stringify + ')')
+                }, () => {
                   try {
+                    function get(text) {
+                      return text;
+                    }
+                    const res = eval('get(' + this.state.stringify + ')')
                     this.setState({
                       stringifyResult: hoegaarden.stringify(res),
                     })
-                  } catch (error) {}
+                  } catch (error) {
+                    this.setState({
+                      stringifyResult: null,
+                    })
+                  }
                 })
               }}
               value={this.state.stringify}
@@ -122,12 +138,16 @@ export default class App extends Component {
               onChange={e => {
                 this.setState({
                   parseUrl: e.target.value,
-                },()=>{
+                }, () => {
                   try {
                     this.setState({
                       parseUrlResult: JSON.stringify(hoegaarden.parseUrl(this.state.parseUrl)),
                     })
-                  } catch (error) {}
+                  } catch (error) {
+                    this.setState({
+                      parseUrlResult: null,
+                    })
+                  }
                 })
               }}
               value={this.state.parseUrl}
@@ -145,12 +165,16 @@ export default class App extends Component {
               onChange={e => {
                 this.setState({
                   extract: e.target.value,
-                },()=>{
+                }, () => {
                   try {
                     this.setState({
                       extractResult: hoegaarden.extract(this.state.extract),
                     })
-                  } catch (error) {}
+                  } catch (error) {
+                    this.setState({
+                      extractResult: null,
+                    })
+                  }
                 })
               }}
               value={this.state.extract}
