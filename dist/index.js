@@ -15,7 +15,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     }
 })(function (require, exports) {
     'use strict';
-    exports.__esModule = true;
+    Object.defineProperty(exports, "__esModule", { value: true });
     function encoderFormatter(key) {
         return function (result, value) {
             if (value === undefined) {
@@ -162,5 +162,5 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
         return url.slice(queryStart + 1);
     }
     var hoegaarden = { extract: extract, param: param, parse: parse, stringify: stringify, parseUrl: parseUrl };
-    exports["default"] = hoegaarden;
+    exports.default = hoegaarden;
 });

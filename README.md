@@ -3,7 +3,7 @@
 ##  Brief Introduction
 
 hoegaarden（豪格登）又名福佳白，一种啤酒的名字。
-目前前端处理url时大多靠手动拼接参数，这不仅加重了开发者的工作服单，而且不利于代码维护，针对该痛点，hoegaarden应运而生。
+目前前端处理url时大多靠手动拼接参数，这不仅加重了开发者的工作负担，而且不利于代码维护，针对该痛点，hoegaarden应运而生。
 目前 hoegaarden 提供5个API: parse, param, stringify, parseUrl 和 extract。
 
 ##  Links to Online
